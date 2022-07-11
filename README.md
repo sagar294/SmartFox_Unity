@@ -1,12 +1,12 @@
 # SmartFox
 
-» Fields declaration
+## Fields declaration
     private string defaultHost = "127.0.0.1";
     private int defaultTcpPort = 9933;
     private int defaultWsPort = 8080;
     
     
-» Unity's Start callback
+## Unity's Start callback
     hostInput.text = defaultHost;
     #if !UNITY_WEBGL
     portInput.text = defaultTcpPort.ToString();
@@ -15,7 +15,7 @@
     #endif
     
     
-» Establishing a connection
+## Establishing a connection
     #if !UNITY_WEBGL
     sfs = new SmartFox();
     #else
@@ -39,7 +39,7 @@
     // Connect to SFS2X
     sfs.Connect(cfg);
     
-» Handling SmartFoxServer events
+## Handling SmartFoxServer events
     void Update() {
         if (sfs != null)
             sfs.ProcessEvents();
