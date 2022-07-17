@@ -101,7 +101,7 @@ namespace SFS2XExamples.MMORoomDemo {
 			foreach (User user in addedUsers)
 			{
 				SpawnRemotePlayer (
-					(SFSUser) user, 
+					(SFSUser)  user, 
 					user.GetVariable("model").GetIntValue(), 
 					user.GetVariable("mat").GetIntValue(), 
 					new Vector3(user.AOIEntryPoint.FloatX, user.AOIEntryPoint.FloatY, user.AOIEntryPoint.FloatZ),
@@ -176,7 +176,7 @@ namespace SFS2XExamples.MMORoomDemo {
 
 			List<UserVariable> userVariables = new List<UserVariable>();
 			userVariables.Add(new SFSUserVariable("mat", numMaterial));
-			sfs.Send(new SetUserVariablesRequest(userVariables));
+			sfs.Send(new SetUserVariablesRequest(userVariables)) ;
 		}
 	
 		public void ChangePlayerModel(int numModel) {
